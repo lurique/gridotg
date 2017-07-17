@@ -28,6 +28,7 @@ Now you've downloaded it, you can compile the file ***main.scss*** under ***SCSS
 
 ## How to use
 After compiling / copying the compiled file, just import it in the header of your website like the example below.
+
 ```html
 <head>
    <!-- Other tags -->
@@ -38,13 +39,16 @@ After compiling / copying the compiled file, just import it in the header of you
 
 You'll need to create a ***container*** to be able to use rows and columns.
 Inheritance will be explained below:
+
 ```
 container
 └ row : with-#-columns
   └ column
 ```
+
 Follow a demo in HTML below:
-```HTML
+
+```html
 <div class="container">
    <div class="row with-three-columns">
       <div class="column"></div>
@@ -53,10 +57,12 @@ Follow a demo in HTML below:
    </div>
 </div>
 ```
+
 **Remember: If you set "with-three-columns", the column count needs to be exactly 3, or it'll not work.**
 
 The gridotg comes with twelve columns system, and you can call it like the demo above or follow the cheatsheet with all classes below:
-```
+
+```css
 # List of standalone classes
 .container
 .row
@@ -94,8 +100,7 @@ The gridotg comes with twelve columns system, and you can call it like the demo 
 .is-12
 ```
 
-**NOTE**: The *row* needs to be inside container and with one of the additional classes listed above. Inside the row needs to be the columns in the same amount as the class described in row. Example:
-- If row has class "with-five-columns", inside of it need to be <div class="column"> * 5.
+**NOTE**: The *row* needs to be inside container and with one of the additional classes listed above. Inside the row needs to be the columns in the same amount as the class described in row.
 
 ---
 
