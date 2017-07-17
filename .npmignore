@@ -57,5 +57,5 @@ typings/
 # dotenv environment variables file
 .env
 
-# Optional pages for developing mode
+# Just for testing
 index.html

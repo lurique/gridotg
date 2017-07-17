@@ -1,0 +1,16 @@
+@mixin size($w, $h) {
+	width: $w;
+	height: $h;
+}
+
+@mixin table-center {
+	display: table;
+	margin: 0 auto;
+}
+
+@mixin transform-center($pos) {
+	position: $pos;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
