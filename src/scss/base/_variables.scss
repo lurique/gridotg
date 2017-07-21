@@ -3,6 +3,7 @@
 ************************************/
 $black: #000;
 $white: #FFF;
+$gray: #E9E9E9;
 $sea-blue: #66A6FF;
 
 /************************************
@@ -15,7 +16,7 @@ $large: 992px;
 $extra-large: 1200px;
 
 /************************************
-	GRIDS
+	ROW GRIDS
 ************************************/
 $row-grids: (
 	'one-column'			: 	auto,
@@ -45,4 +46,13 @@ $column-grids: (
 	'10': calc(1120px / 1.2),
 	'11': calc(1120px / 1.09091),
 	'12': calc(1120px / 1)
+);
+
+/************************************
+	NAV GRIDS
+************************************/
+$nav-grids: (
+	'one-column'			: 	auto,
+	'two-columns'			: 	auto auto,
+	'three-columns'		: 	auto auto auto
 );

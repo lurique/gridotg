@@ -26,6 +26,9 @@
 	}
 }
 
+/************************************
+	RESPONSIVE
+************************************/
 @media only screen and (max-width: $large) {
 	.container {
 		&:not(.is-fullwidth) {

@@ -1,0 +1,18 @@
+:root {
+	box-sizing: border-box;
+	cursor: default;
+	text-size-adjust: 100%;
+
+	*, ::before, &::after {
+		box-sizing: inherit;
+		font-family: sans-serif;
+	}
+
+	body {
+		margin: 0;
+
+		a {
+			text-decoration: none;
+		}
+	}
+}

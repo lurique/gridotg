@@ -1,0 +1,129 @@
+.nav {
+	position: relative;
+	display: grid;
+
+	@each $grid, $columns in $nav-grids {
+		&.with-#{$grid} {
+			grid-template-columns: $columns;
+		}
+	}
+
+	&.nav-fixed-top {
+		position: fixed;
+		top: 0;
+	}
+	
+	&.nav-fixed-bottom {
+		position: fixed;
+		bottom: 0;
+	}
+
+	// Additional class for layout
+	&.nav-default {
+		@include size(100%, 60px);
+		@include padding-direction('x', 15px);
+		background: $white;
+		border-bottom: 1px solid $gray;
+
+		&.nav-fixed-bottom {
+			border-bottom: 0;
+			border-top: 1px solid $gray;
+		}
+
+		.nav-items {
+			a {
+				color: $black;
+				padding: 21px;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	.nav-open {
+		display: none;
+		position: absolute;
+		right: 15px;
+		top: 50%;
+		transform: translateY(-50%);
+
+		span {
+			@include size(20px, 2px);
+			display: block;
+			background: $black;
+
+			&:nth-child(2) {
+				width: 15px;
+			}
+
+			&:not(:last-child) {
+				margin-bottom: 5px
+			}
+		}
+	}
+
+	.nav-items {
+		align-self: center;
+
+		&.nav-left {
+			text-align: left;
+
+			a:first-child {
+				padding-left: 0;
+			}
+		}
+
+		&.nav-center {
+			text-align: center;
+		}
+		
+		&.nav-right {
+			text-align: right;
+
+			a:last-child {
+				padding-right: 0;
+			}
+		}
+	}
+}
+
+/************************************
+	RESPONSIVE
+************************************/
+@media only screen and (max-width: $large) {
+	.nav {
+		&.nav-default {
+			padding: 0;
+		}
+
+		.nav-items {
+			&:nth-child(2) {
+				padding-top: 20px;
+				padding-left: 15px;
+			}
+
+			&:not(:nth-child(2)) {
+				grid-column-start: 1;
+				grid-column-end: 10;
+				margin-top: 43px;
+				position: relative;
+				top: -22px;
+				z-index: -1;
+
+				a {
+					background: $white;
+					display: block;
+					padding: 15px;
+					text-align: left;
+				}
+
+				&:last-child {
+					margin-top: 0;
+				}
+			}
+		}
+
+		.nav-open {
+			display: block;
+		}
+	}
+}

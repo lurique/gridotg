@@ -14,3 +14,13 @@
 	left: 50%;
 	transform: translateX(-50%);
 }
+
+@mixin padding-direction($dir, $size) {
+	@if $dir == 'y' {
+		padding-top: $size;
+		padding-bottom: $size;
+	} @else if $dir == 'x' {
+		padding-left: $size;
+		padding-right: $size;
+	}
+}
