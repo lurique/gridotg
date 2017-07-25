@@ -3,7 +3,19 @@
 ************************************/
 $black: #000;
 $white: #FFF;
+
+$light-gray: #F6F6F6;
 $gray: #E9E9E9;
+
+$red: #EF5350;
+$dark-red: #F44336;
+
+$green: #66BB6A;
+$dark-green: #4CAF50;
+
+$yellow: #FFCA28;
+$dark-yellow: #FFC107;
+
 $sea-blue: #66A6FF;
 
 /************************************
@@ -14,45 +26,3 @@ $small: 480px;
 $medium: 768px;
 $large: 992px;
 $extra-large: 1200px;
-
-/************************************
-	ROW GRIDS
-************************************/
-$row-grids: (
-	'one-column'			: 	auto,
-	'two-columns'			: 	auto auto,
-	'three-columns'		: 	auto auto auto,
-	'four-columns'		: 	auto auto auto auto,
-	'five-columns'		: 	auto auto auto auto auto,
-	'six-columns'			: 	auto auto auto auto auto auto,
-	'seven-columns'		: 	auto auto auto auto auto auto auto,
-	'eight-columns'		: 	auto auto auto auto auto auto auto auto,
-	'nine-columns'		: 	auto auto auto auto auto auto auto auto auto,
-	'ten-columns'			: 	auto auto auto auto auto auto auto auto auto auto,
-	'eleven-columns'	: 	auto auto auto auto auto auto auto auto auto auto auto,
-	'twelve-columns'	: 	auto auto auto auto auto auto auto auto auto auto auto auto
-);
-
-$column-grids: (
-	'1': calc(1120px / 12),
-	'2': calc(1120px / 6),
-	'3': calc(1120px / 4),
-	'4': calc(1120px / 3),
-	'5': calc(1120px / 2.4),
-	'6': calc(1120px / 2),
-	'7': calc(1120px / 1.71429),
-	'8': calc(1120px / 1.5),
-	'9': calc(1120px / 1.33333),
-	'10': calc(1120px / 1.2),
-	'11': calc(1120px / 1.09091),
-	'12': calc(1120px / 1)
-);
-
-/************************************
-	NAV GRIDS
-************************************/
-$nav-grids: (
-	'one-column'			: 	auto,
-	'two-columns'			: 	auto auto,
-	'three-columns'		: 	auto auto auto
-);

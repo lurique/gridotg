@@ -1,7 +1,20 @@
+/************************************
+	NO GAP
+************************************/
 .no-gap {
 	grid-column-gap: 0;
 }
 
+/************************************
+	NAVBAR BODY PADDING
+************************************/
+.has-navbar-gap {
+	padding-top: 60px;
+}
+
+/************************************
+	NO PADDINGS
+************************************/
 .no-padding {
 	padding: 0;
 }
@@ -14,4 +27,19 @@
 .no-padding-y {
 	padding-left: 0;
 	padding-right: 0;
+}
+
+/************************************
+	ALIGNMENTS
+************************************/
+.is-aligned-right {
+	text-align: right;
+}
+
+.is-aligned-left {
+	text-align: left;
+}
+
+.is-aligned-center {
+	text-align: center;
 }

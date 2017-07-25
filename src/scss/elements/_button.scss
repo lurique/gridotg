@@ -1,0 +1,62 @@
+/************************************
+	VARIABLES
+************************************/
+$buttons: (
+	'success': 1,
+	'warning': 2,
+	'error': 3 
+);
+
+/************************************
+	BUTTON
+************************************/
+.button {
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	padding: 10px 20px;
+	position: relative;
+	display: inline-block;
+
+	// Custom displays
+	&.button-block {
+		display: block;
+	}
+
+	// Custom styles
+	&.button-default {
+		background: $light-gray;
+		border: 1px solid $gray;
+		color: $black;
+	}
+
+	&.button-success,
+	&.button-warning,
+	&.button-error {
+		color: $white;
+	}
+
+	&.button-warning {
+		background: $yellow;
+
+		&:hover {
+			background: $dark-yellow;
+		}
+	}
+
+	&.button-success {
+		background: $green;
+
+		&:hover {
+			background: $dark-green;
+		}
+	}
+
+	&.button-error {
+		background: $red;
+
+		&:hover {
+			background: $dark-red;
+		}
+	}
+}

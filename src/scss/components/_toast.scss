@@ -1,0 +1,76 @@
+/************************************
+	TOAST
+************************************/
+.toast {
+	@include size(350px, auto);
+	background: $gray;
+	border-radius: 3px;
+	box-shadow: 0 0 8px 0 rgba(0,0,0,0.15);
+	position: fixed;
+	padding: 15px;
+	bottom: 30px;
+	right: 30px;
+
+	.toast-close {
+		position: absolute;
+		right: 5px;
+		top: 5px;
+		padding: 10px 5px;
+
+		span {
+			@include size(15px, 2px);
+			background: $black;
+			display: block;
+
+			&:first-child { transform: rotate(45deg) translate(1px, 0px); }
+			&:last-child { transform: rotate(-45deg) translate(1.5px, 0px); }
+		}
+
+		&:hover {
+			span {
+				opacity: 0.6;
+			}
+		}
+	}
+
+	.toast-content {
+		width: calc(100% - 15px);
+	}
+
+	// Default colors
+	&.toast-success,
+	&.toast-warning,
+	&.toast-error {
+		.toast-close {
+			span {
+				background: $white;
+			}
+		}
+
+		.toast-content {
+			color: $white;
+		}
+	}
+
+	&.toast-success {
+		background: $green;
+	}
+
+	&.toast-warning {
+		background: $yellow;
+	}
+
+	&.toast-error {
+		background: $red;
+	}
+}
+
+/************************************
+	RESPONSIVE
+************************************/
+@media only screen and (max-width: $small) {
+	.toast {
+		@include size(calc(100% - 30px), auto);
+		right: 15px;
+	}
+}

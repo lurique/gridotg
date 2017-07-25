@@ -1,3 +1,15 @@
+/************************************
+	VARIABLES
+************************************/
+$nav-grids: (
+	'one-column'			: 	auto,
+	'two-columns'			: 	auto auto,
+	'three-columns'		: 	auto auto auto
+);
+
+/************************************
+	NAVBAR
+************************************/
 .nav {
 	position: relative;
 	display: grid;

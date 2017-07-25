@@ -1,0 +1,65 @@
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	&::after {
+		@include size(100vw, 100vh);
+		background: rgba(0,0,0,0.75);
+		content: "";
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 19;
+	}
+
+	.modal-wrapper {
+		@include size(420px, auto);
+		background: $white;
+		border-radius: 3px;
+		box-shadow: 0 0 10px 0 rgba(0,0,0,0.15);
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 20;
+
+		.modal-header {
+			@include padding-direction('x', 15px);
+			border-bottom: 1px solid $gray;
+
+			.modal-close {
+				position: absolute;
+				right: 5px;
+				top: 5px;
+				padding: 10px 5px;
+
+				span {
+					@include size(15px, 2px);
+					background: $black;
+					display: block;
+
+					&:first-child { transform: rotate(45deg) translate(1px, 0px); }
+					&:last-child { transform: rotate(-45deg) translate(1.5px, 0px); }
+				}
+
+				&:hover {
+					span {
+						opacity: 0.6;
+					}
+				}
+			}
+		}
+
+		.modal-body {
+			padding: 15px;
+		}
+
+		.modal-footer {
+			background: $gray;
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+			padding: 15px;
+		}
+	}
+}
