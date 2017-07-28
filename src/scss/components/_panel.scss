@@ -1,0 +1,20 @@
+.panel {
+	background: $white;
+	border: 1px solid $gray;
+
+	.panel-header {
+		background: inherit;
+		border-bottom: 1px solid $gray;
+		padding: 15px;
+	}
+
+	.panel-body {
+		background: inherit;
+		padding: 15px;
+	}
+
+	.panel-footer {
+		background: $gray;
+		padding: 15px;
+	}
+}

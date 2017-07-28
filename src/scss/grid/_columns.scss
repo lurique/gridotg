@@ -41,24 +41,27 @@ $column-grids: (
 	&.is-fullwidth {
 		width: 100%;
 	}
+}
 
-	.row {
-		display: grid;
-		grid-column-gap: 15px;
+// Defines a row
+.row {
+	display: grid;
+	grid-column-gap: 15px;
+}
 
-		@each $grid, $size in $row-grids {
-			&.with-#{$grid} {
-				grid-template-columns: #{$size};
-			}
+// Define a size of a column
+.column {
+	@each $grid, $size in $column-grids {
+		&.is-#{$grid} {
+			width: $size;
 		}
+	}
+}
 
-		.column {
-			@each $grid, $size in $column-grids {
-				&.is-#{$grid} {
-					width: $size;
-				}
-			}
-		}
+// Defines quantity of columns
+@each $grid, $size in $row-grids {
+	.with-#{$grid} {
+		grid-template-columns: #{$size};
 	}
 }
 
@@ -74,12 +77,10 @@ $column-grids: (
 }
 
 @media only screen and (max-width: $small) {
-	.container {
-		.row {
-			@each $grid, $size in $row-grids {
-				&[class*="with"] {
-					grid-template-columns: auto;
-				}
+	.row {
+		@each $grid, $size in $row-grids {
+			&[class*="with"] {
+				grid-template-columns: auto;
 			}
 		}
 	}

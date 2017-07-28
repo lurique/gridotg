@@ -43,3 +43,37 @@
 .is-aligned-center {
 	text-align: center;
 }
+
+/************************************
+	TEXT TRANSFORMATIONS
+************************************/
+.has-uppercase-text {
+	text-transform: uppercase;
+}
+
+.has-lowercase-text {
+	text-transform: lowercase;
+}
+
+.has-capitalized-text {
+	text-transform: capitalize;
+}
+
+/************************************
+	ARROWS
+************************************/
+.arrow-up {
+	@include arrow-direction('top', 5px, $sea-blue);
+}
+
+.arrow-right {
+	@include arrow-direction('right', 5px, $sea-blue);
+}
+
+.arrow-down {
+	@include arrow-direction('bottom', 5px, $sea-blue);
+}
+
+.arrow-left {
+	@include arrow-direction('left', 5px, $sea-blue);
+}

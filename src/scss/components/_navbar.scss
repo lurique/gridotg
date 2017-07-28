@@ -1,98 +1,113 @@
 /************************************
 	VARIABLES
 ************************************/
-$nav-grids: (
-	'one-column'			: 	auto,
-	'two-columns'			: 	auto auto,
-	'three-columns'		: 	auto auto auto
-);
+
 
 /************************************
 	NAVBAR
 ************************************/
-.nav {
-	position: relative;
+.navbar {
 	display: grid;
+	position: relative;
 
-	@each $grid, $columns in $nav-grids {
-		&.with-#{$grid} {
-			grid-template-columns: $columns;
-		}
+	// Helper classes
+	&.navbar-fixed-top {
+		@include element-position(fixed, 0, initial, initial, 0);
+		z-index: 20;
 	}
 
-	&.nav-fixed-top {
-		position: fixed;
-		top: 0;
-	}
-	
-	&.nav-fixed-bottom {
-		position: fixed;
-		bottom: 0;
-	}
-
-	// Additional class for layout
-	&.nav-default {
-		@include size(100%, 60px);
+	&.navbar-default {
+		@include element-size(100%, 60px);
 		@include padding-direction('x', 15px);
 		background: $white;
 		border-bottom: 1px solid $gray;
 
-		&.nav-fixed-bottom {
-			border-bottom: 0;
-			border-top: 1px solid $gray;
-		}
-
-		.nav-items {
-			a {
-				color: $black;
-				padding: 21px;
-				text-transform: uppercase;
+		.navbar-items {
+			ul {
+				li {
+					a {
+						color: $black;
+					}
+				}
 			}
 		}
 	}
 
-	.nav-open {
-		display: none;
+	// Child classe
+	.navbar-open {
 		position: absolute;
-		right: 15px;
-		top: 50%;
-		transform: translateY(-50%);
-
-		span {
-			@include size(20px, 2px);
-			display: block;
-			background: $black;
-
-			&:nth-child(2) {
-				width: 15px;
-			}
-
-			&:not(:last-child) {
-				margin-bottom: 5px
-			}
-		}
+		background: red;
 	}
 
-	.nav-items {
+	.navbar-items {
+		display: grid;
 		align-self: center;
 
-		&.nav-left {
-			text-align: left;
+		div {
+			ul {
+				padding: 0;
 
-			a:first-child {
-				padding-left: 0;
+				li {
+					display: inline-block;
+					list-style-type: none;
+					position: relative;
+
+					a {
+						padding: 21px;
+					}
+
+					&.dropdown {
+						padding-right: 10px;
+
+						&::after {
+							@include arrow-direction('bottom', 5px, $sea-blue);
+							content: "";
+							position: absolute;
+							right: 10px;
+							top: 5px;
+						}
+
+						ul {
+							@include element-size(100%, auto);
+							position: absolute;
+							box-shadow: 0 2px 2px 0 rgba(0,0,0,0.15);
+							margin-top: 21px;
+							display: none;
+
+							li {
+								display: block;
+
+								a {
+									@include padding-direction('x', 0);
+									display: block;
+									background: $white;
+
+									&:hover {
+										background: $gray;
+									}
+								}
+							}
+						}
+
+						&:hover {
+							ul {
+								display: block;
+							}
+						}
+					}
+				}
 			}
-		}
 
-		&.nav-center {
-			text-align: center;
-		}
-		
-		&.nav-right {
-			text-align: right;
+			&:first-child {
+				a {
+					padding-left: 0;
+				}
+			}
 
-			a:last-child {
-				padding-right: 0;
+			&:last-child {
+				a {
+					padding-right: 0;
+				}
 			}
 		}
 	}
@@ -102,40 +117,5 @@ $nav-grids: (
 	RESPONSIVE
 ************************************/
 @media only screen and (max-width: $large) {
-	.nav {
-		&.nav-default {
-			padding: 0;
-		}
-
-		.nav-items {
-			&:nth-child(2) {
-				padding-top: 20px;
-				padding-left: 15px;
-			}
-
-			&:not(:nth-child(2)) {
-				grid-column-start: 1;
-				grid-column-end: 10;
-				margin-top: 43px;
-				position: relative;
-				top: -22px;
-				z-index: -1;
-
-				a {
-					background: $white;
-					display: block;
-					padding: 15px;
-					text-align: left;
-				}
-
-				&:last-child {
-					margin-top: 0;
-				}
-			}
-		}
-
-		.nav-open {
-			display: block;
-		}
-	}
+	
 }

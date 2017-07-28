@@ -1,11 +1,30 @@
+/************************************
+	SIZING
+************************************/
 @mixin size($w, $h) {
 	width: $w;
 	height: $h;
 }
 
+@mixin element-size($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+/************************************
+	POSITIONING
+************************************/
 @mixin table-center {
 	display: table;
 	margin: 0 auto;
+}
+
+@mixin element-position($pos, $top, $right, $bottom, $left) {
+	position: $pos;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
 }
 
 @mixin transform-center($pos) {
@@ -15,6 +34,9 @@
 	transform: translateX(-50%);
 }
 
+/************************************
+	ALIGNMENT
+************************************/
 @mixin padding-direction($dir, $size) {
 	@if $dir == 'y' {
 		padding-top: $size;
@@ -22,5 +44,28 @@
 	} @else if $dir == 'x' {
 		padding-left: $size;
 		padding-right: $size;
+	}
+}
+
+/************************************
+	ARROWS
+************************************/
+@mixin arrow-direction($dir, $size, $color) {
+	@if $dir == 'top' {
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-bottom: $size solid $color;
+	} @else if $dir == 'right' {
+		border-top: $size solid transparent;
+		border-bottom: $size solid transparent;
+		border-left: $size solid $color;
+	} @else if $dir == 'bottom' {
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-top: $size solid $color;
+	} @else if $dir == 'left' {
+		border-top: $size solid transparent;
+		border-bottom: $size solid transparent;
+		border-right: $size solid $color;
 	}
 }
