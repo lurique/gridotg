@@ -28,10 +28,27 @@
 		}
 	}
 
-	// Child classe
+	// Child class
 	.navbar-open {
 		position: absolute;
-		background: red;
+		top: 50%;
+		right: 15px;
+		transform: translateY(-50%);
+
+		span {
+			display: block;
+			width: 25px;
+			height: 1px;
+			background: $black;
+
+			&:not(:last-child) {
+				margin-bottom: 7px;
+			}
+
+			&:nth-child(2) {
+				width: 20px;
+			}
+		}
 	}
 
 	.navbar-items {
@@ -85,6 +102,10 @@
 						}
 
 						&:hover {
+							&::after {
+								transform: rotate(180deg);
+							}
+
 							ul {
 								display: block;
 							}
@@ -113,8 +134,62 @@
 ************************************/
 @media only screen and (max-width: $large) {
 	.navbar {
-		.navbar-items {
-			display: block;
+		
+		&.navbar-default {
+			padding: 0;
+
+			.navbar-items {
+				display: block;
+
+				div {
+					&:not(:first-child) {
+						display: none;
+					}
+
+					&:first-child {
+						ul {
+							li {
+								padding: 20px 15px;
+							}
+						}
+					}
+					
+					ul {
+						margin: 0;
+
+						li {
+							display: block;
+							padding: 15px 0;
+							text-align: left;
+
+							&.dropdown {
+								&::after {
+									margin-top: 15px;
+								}
+
+								ul {
+									margin-top: 15px;
+									z-index: 1;
+
+									li {
+										padding-left: 25px;
+
+										a {
+											background: transparent;
+											padding: 0;
+										}
+									}
+								}
+
+								&:hover {
+									background: $light-gray;
+									height: 150px;
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }
