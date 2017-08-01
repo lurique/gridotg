@@ -104,6 +104,11 @@ The gridotg comes with twelve columns system, and you can call it like the demo 
 
 ---
 
+## Newly added components
+* Navbar - Documentation coming soon.
+
+---
+
 ### Some notes
 Simple, huh?
 
