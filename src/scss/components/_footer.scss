@@ -1,0 +1,14 @@
+.footer {
+	@include size(100%, auto);
+	position: relative;
+
+	&.footer-default {
+		background: #F1F1F1;
+		padding: 15px;
+	}
+
+	&.footer-fixed-bottom {
+		position: fixed;
+		bottom: 0;
+	}
+}

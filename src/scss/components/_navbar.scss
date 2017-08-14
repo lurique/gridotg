@@ -30,6 +30,7 @@
 
 	// Child class
 	.navbar-open {
+		display: none;
 		position: absolute;
 		top: 50%;
 		right: 15px;
@@ -134,7 +135,10 @@
 ************************************/
 @media only screen and (max-width: $large) {
 	.navbar {
-		
+		.navbar-open {
+			display: block;
+		}
+
 		&.navbar-default {
 			padding: 0;
 
