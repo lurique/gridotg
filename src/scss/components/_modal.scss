@@ -1,0 +1,51 @@
+.modal {
+	.modal-content {
+		@include size(568px, auto);
+		@include transform-middle-center(fixed);
+		background: $white;
+		border-radius: 3px;
+		box-shadow: 0 0 10px 0 rgba(0,0,0,0.15);
+		z-index: 21;
+
+		.modal-header {
+			border-bottom: 1px solid $gray;
+			position: relative;
+			padding-left: 15px;
+
+			.modal-close {
+				@include size(20px, 20px);
+				padding-top: 10px;
+				padding-left: 3px;
+				position: absolute;
+				top: -15px;
+				right: 5px;
+
+				.bar {
+					@include size(15px, 1px);
+					background: $black;
+					display: block;
+
+					&:nth-child(1) {
+						transform: rotate(45deg);
+					}
+
+					&:nth-child(2) {
+						transform: rotate(-45deg);
+						margin-top: -1px;
+					}
+				}
+			}
+		}
+
+		.modal-body {
+			padding: 15px;
+		}
+	}
+
+	&::before {
+		@include pseudo-element('', fixed, 0, initial, initial, 0);
+		@include size(100vw, 100vh);
+		background: rgba(0,0,0,0.75);
+		z-index: 20;
+	}
+}

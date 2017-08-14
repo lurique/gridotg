@@ -34,6 +34,13 @@
 	transform: translateX(-50%);
 }
 
+@mixin transform-middle-center($pos) {
+	position: $pos;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
 /************************************
 	ALIGNMENT
 ************************************/
@@ -68,4 +75,16 @@
 		border-bottom: $size solid transparent;
 		border-right: $size solid $color;
 	}
+}
+
+/************************************
+	PSEUDO ELEMENTS
+************************************/
+@mixin pseudo-element($content, $pos, $top, $right, $bottom, $left) {
+	content: $content;
+	position: $pos;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
 }

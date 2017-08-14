@@ -1,6 +1,16 @@
-div#test-modal.modal(data-script="Modal")
-	p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt consectetur aliquam incidunt necessitatibus et beatae, itaque quis illo commodi sint! Amet unde similique modi, nesciunt voluptatibus minus ratione. Eveniet, nesciunt?
+div#modal-announcement.modal.modal-default(data-script="Modal")
+	div.modal-content
+		div.modal-header
+			h1 Modal annoucement
 
-button.button(data-modal="test-modal") Teste
+			a.modal-close(href="#" data-modal="modal-annoucement")
+				span.bar
+				span.bar
 
-button.button(data-modal="test-test") Teste 2
+		div.modal-body
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut assumenda ullam, autem possimus? Sint voluptatibus mollitia quibusdam, culpa neque ducimus voluptas totam animi obcaecati velit aspernatur optio. Assumenda, sapiente, enim?
+
+		div.modal-footer
+			button Dispose
+
+button.modal-open(data-modal="modal-announcement") Teste
