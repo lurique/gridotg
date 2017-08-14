@@ -4,6 +4,7 @@ var gulp = require('gulp'),
 		changed = require('gulp-changed'),
 		cssnano = require('gulp-cssnano'),
 		jade = require('gulp-jade'),
+		uglify = require('gulp-uglify'),
 		sass = require('gulp-sass');
 
 var browsersync = require('browser-sync'),
@@ -36,9 +37,19 @@ gulp.task('css', function() {
 		.pipe(gulp.dest(path_dist + 'css'));
 });
 
+gulp.task('js', function() {
+	gulp.src(path_src + 'js/**/*.js')
+		.pipe(changed(path_dist + 'js'), {extension: 'js'})
+		.pipe(concat('script.min.js'))
+		.pipe(uglify())
+		.on('error', swallowError)
+		.pipe(gulp.dest(path_dist + 'js'));
+});
+
 gulp.task('watch', function() {
 	var html = gulp.watch([path_src + 'index.jade', path_src + 'includes/**/*.jade'], ['html']);
   var css = gulp.watch([path_src + 'scss/**/*.scss'], ['css']);
+  var js = gulp.watch([path_src + 'js/**/*.js'], ['js']);
 });
 
 gulp.task('browser-sync', function() {
@@ -51,4 +62,4 @@ gulp.task('browser-sync', function() {
 });
 
 // Global task
-gulp.task('default', ['html', 'css', 'browser-sync', 'watch']);
+gulp.task('default', ['html', 'css', 'js', 'browser-sync', 'watch']);
