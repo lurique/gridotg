@@ -1,67 +1,65 @@
 /************************************
+	VARIABLES
+************************************/
+$toast-colors: (
+	'default': $gray $black,
+	'success': $green $white,
+	'warning': $yellow $white,
+	'error': $red $white
+);
+
+/************************************
 	TOAST
 ************************************/
 .toast {
 	@include size(350px, auto);
-	background: $gray;
+	@include element-position(fixed, initial, 15px, 15px, initial);
 	border-radius: 3px;
-	box-shadow: 0 0 8px 0 rgba(0,0,0,0.15);
-	position: fixed;
+	box-shadow: 0 0 5px 0 rgba(0,0,0,0.25);
 	padding: 15px;
-	bottom: 30px;
-	right: 30px;
+	transform: scale(0);
+	z-index: 30;
 
 	.toast-close {
+		@include size(20px, 20px);
+		padding-top: 10px;
+		padding-left: 3px;
 		position: absolute;
-		right: 5px;
 		top: 5px;
-		padding: 10px 5px;
+		right: 5px;
 
-		span {
-			@include size(15px, 2px);
+		.bar {
+			@include size(15px, 1px);
 			background: $black;
 			display: block;
 
-			&:first-child { transform: rotate(45deg) translate(1px, 0px); }
-			&:last-child { transform: rotate(-45deg) translate(1.5px, 0px); }
-		}
+			&:nth-child(1) {
+				transform: rotate(45deg);
+			}
 
-		&:hover {
-			span {
-				opacity: 0.6;
+			&:nth-child(2) {
+				transform: rotate(-45deg);
+				margin-top: -1px;
 			}
 		}
 	}
 
-	.toast-content {
-		width: calc(100% - 15px);
+	&.active {
+		transform: scale(1);
 	}
 
 	// Default colors
-	&.toast-success,
-	&.toast-warning,
-	&.toast-error {
-		.toast-close {
-			span {
-				background: $white;
+	@each $toast, $color in $toast-colors {
+		&.toast-#{$toast} {
+			background: nth($color, 1);
+			color: nth($color, 2);
+
+			.toast-close {
+				.bar {
+					background: nth($color, 2);
+				}
 			}
 		}
-
-		.toast-content {
-			color: $white;
-		}
-	}
-
-	&.toast-success {
-		background: $green;
-	}
-
-	&.toast-warning {
-		background: $yellow;
-	}
-
-	&.toast-error {
-		background: $red;
 	}
 }
 
@@ -71,6 +69,5 @@
 @media only screen and (max-width: $small) {
 	.toast {
 		@include size(calc(100% - 30px), auto);
-		right: 15px;
 	}
 }
