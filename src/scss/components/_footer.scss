@@ -1,3 +1,6 @@
+/************************************
+	FOOTER
+************************************/
 .footer {
 	@include size(100%, auto);
 	position: relative;
@@ -10,5 +13,17 @@
 	&.footer-fixed-bottom {
 		position: fixed;
 		bottom: 0;
+	}
+}
+
+/************************************
+	RESPONSIVE
+************************************/
+@media only screen and (max-width: $small) {
+	// Completely optional
+	.footer {
+		p {
+			text-align: center;
+		}
 	}
 }
