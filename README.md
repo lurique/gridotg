@@ -14,11 +14,11 @@ Grid On-The-Go - A simple powerful grid system for modern browsers
 This frameworks is available on Github and Npm, you can either download via cli or clone the github repository.
 
 Installing via npm:
-```
+```{r, engine='bash', count_lines}
 npm install gridotg --save
 ```
 Installing via github (via HTTPS):
-```
+```{r, engine='bash', count_lines}
 git clone https://github.com/lurique/gridotg.git
 ```
 
@@ -39,14 +39,6 @@ After compiling / copying the compiled file, just import it in the header of you
 
 You'll need to create a ***container*** to be able to use rows and columns.
 Inheritance will be explained below:
-
-```
-container
-└ row : with-#-columns
-  └ column
-```
-
-Follow a demo in HTML below:
 
 ```html
 <div class="container">
