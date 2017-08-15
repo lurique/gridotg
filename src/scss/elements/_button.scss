@@ -2,9 +2,10 @@
 	VARIABLES
 ************************************/
 $buttons: (
-	'success': 1,
-	'warning': 2,
-	'error': 3 
+	'default': $light-gray $gray $black,
+	'success': $green $dark-green $white,
+	'warning': $yellow $dark-yellow $white,
+	'error': $red $dark-red $white 
 );
 
 /************************************
@@ -16,47 +17,17 @@ $buttons: (
 	cursor: pointer;
 	padding: 10px 20px;
 	position: relative;
-	display: inline-block;
 
-	// Custom displays
-	&.button-block {
-		display: block;
-	}
+	@each $button, $color in $buttons {
+		&.button-#{$button} {
+			background: nth($color, 1);
+			border: 1px solid nth($color, 2);
+			color: nth($color, 3);
+			font-size: 0.85em;
 
-	// Custom styles
-	&.button-default {
-		background: $light-gray;
-		border: 1px solid $gray;
-		color: $black;
-	}
-
-	&.button-success,
-	&.button-warning,
-	&.button-error {
-		color: $white;
-	}
-
-	&.button-warning {
-		background: $yellow;
-
-		&:hover {
-			background: $dark-yellow;
-		}
-	}
-
-	&.button-success {
-		background: $green;
-
-		&:hover {
-			background: $dark-green;
-		}
-	}
-
-	&.button-error {
-		background: $red;
-
-		&:hover {
-			background: $dark-red;
+			&:hover {
+				background: nth($color, 2);
+			}
 		}
 	}
 }
