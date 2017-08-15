@@ -3,14 +3,15 @@ div#modal-announcement.modal.modal-default(data-script="Modal")
 		div.modal-header
 			h1 Modal annoucement
 
-			a.modal-close(href="#" data-modal="modal-annoucement")
+			a.modal-close(href="#")
 				span.bar
 				span.bar
 
 		div.modal-body
 			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut assumenda ullam, autem possimus? Sint voluptatibus mollitia quibusdam, culpa neque ducimus voluptas totam animi obcaecati velit aspernatur optio. Assumenda, sapiente, enim?
 
-		div.modal-footer
-			button Dispose
+		div.modal-footer.is-aligned-right
+			button.modal-close.button.button-error No
+			button.modal-close.button.button-success Yes
 
-button.modal-open(data-modal="modal-announcement") Teste
+button.modal-open.button.button-default(data-modal="modal-announcement") Open modal

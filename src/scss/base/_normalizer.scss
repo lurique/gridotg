@@ -20,5 +20,12 @@
 			margin: 0;
 			padding: 0;
 		}
+
+		@for $i from 0 through 6 {
+			h#{$i} {
+				margin: 0;
+				padding: 0;
+			}
+		}
 	}
 }

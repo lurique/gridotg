@@ -1,23 +1,27 @@
+/************************************
+	MODAL
+************************************/
 .modal {
 	.modal-content {
 		@include size(568px, auto);
-		@include transform-middle-center(fixed);
+		@include element-position(fixed, 50%, initial, initial, 50%);
 		background: $white;
 		border-radius: 3px;
 		box-shadow: 0 0 10px 0 rgba(0,0,0,0.15);
+		transform: translate(-50%, -50%) scale(0);
 		z-index: 21;
 
 		.modal-header {
 			border-bottom: 1px solid $gray;
+			padding: 15px;
 			position: relative;
-			padding-left: 15px;
 
 			.modal-close {
 				@include size(20px, 20px);
 				padding-top: 10px;
 				padding-left: 3px;
 				position: absolute;
-				top: -15px;
+				top: 5px;
 				right: 5px;
 
 				.bar {
@@ -40,12 +44,41 @@
 		.modal-body {
 			padding: 15px;
 		}
+
+		.modal-footer {
+			background: $light-gray;
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+			padding: 15px;
+		}
 	}
 
 	&::before {
 		@include pseudo-element('', fixed, 0, initial, initial, 0);
 		@include size(100vw, 100vh);
 		background: rgba(0,0,0,0.75);
+		transform: scale(0);
 		z-index: 20;
 	}
+
+	&.active {
+		&::before {
+			transform: scale(1);
+		}
+
+		.modal-content {
+			transform: translate(-50%, -50%) scale(1);
+		}
+	}
+}
+
+/************************************
+	RESPONSIVE
+************************************/
+@media only screen and (max-width: $medium) {
+	.modal {
+		.modal-content {
+			@include size(calc(100% - 30px), auto);
+		}
+	}	
 }
