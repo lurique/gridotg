@@ -4,7 +4,8 @@
   "description": "Grid On-The-Go - A simple powerful grid system for modern browsers",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run gulp",
+    "gulp": "gulp"
   },
   "repository": "git+https://github.com/lurique/gridotg.git",
   "keywords": [
