@@ -76,7 +76,7 @@ $column-grids: (
 	}
 }
 
-@media only screen and (max-width: $small) {
+@media only screen and (max-width: $medium) {
 	.row {
 		@each $grid, $size in $row-grids {
 			&[class*="with"] {
