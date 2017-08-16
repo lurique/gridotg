@@ -1,6 +1,6 @@
 {
   "name": "gridotg",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "description": "Grid On-The-Go - A simple powerful grid system for modern browsers",
   "main": "index.html",
   "scripts": {
