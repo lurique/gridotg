@@ -47,6 +47,7 @@ $column-grids: (
 .row {
 	display: grid;
 	grid-column-gap: 15px;
+	margin: 7.5px 0;
 }
 
 // Define a size of a column
