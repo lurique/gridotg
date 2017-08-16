@@ -30,11 +30,13 @@
 
 	// Child class
 	.navbar-open {
+		cursor: pointer;
 		display: none;
 		position: absolute;
 		top: 50%;
 		right: 15px;
 		transform: translateY(-50%);
+		z-index: 21;
 
 		span {
 			display: block;
@@ -101,16 +103,6 @@
 								}
 							}
 						}
-
-						&:hover {
-							&::after {
-								transform: rotate(180deg);
-							}
-
-							ul {
-								display: block;
-							}
-						}
 					}
 				}
 			}
@@ -143,11 +135,16 @@
 			padding: 0;
 
 			.navbar-items {
+				background: $white;
+				box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
 				display: block;
 
 				div {
 					&:not(:first-child) {
-						display: none;
+						background: $white;
+						display: block;
+						max-height: 0;
+						transform: scaleY(0);
 					}
 
 					&:first-child {
@@ -184,13 +181,21 @@
 										}
 									}
 								}
-
-								&:hover {
-									background: $light-gray;
-									height: 150px;
-								}
 							}
 						}
+					}
+				}
+			}
+		}
+	}
+
+	&.active {
+		&.navbar-default {
+			.navbar-items {
+				div {
+					&:not(:first-child) {
+						max-height: initial;
+						transform: scaleY(1);
 					}
 				}
 			}
