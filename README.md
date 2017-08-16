@@ -97,7 +97,7 @@ The components below don't have specific documentation about them, only the HTML
 You could use the javascript by just adding ***data-script="name of script"*** on your parent element. - See below for JS documentation.
 
 ### Navbar
-```HTML
+```html
 <nav class="navbar navbar-default navbar-fixed-top" id="default-navbar" data-script="Navbar">
   <div class="navbar-open" data-navbar="default-navbar"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
   <div class="navbar-items with-three-columns has-uppercase-text">
@@ -130,7 +130,7 @@ You could use the javascript by just adding ***data-script="name of script"*** o
 ```
 
 ### Footer
-```HTML
+```html
 <footer class="footer footer-default">
   <div class="container is-fullwidth">
     <div class="row with-two-columns">
@@ -146,7 +146,7 @@ You could use the javascript by just adding ***data-script="name of script"*** o
 ```
 
 ### Modal
-```HTML
+```html
 <div class="modal modal-default" id="modal-announcement" data-script="Modal">
   <div class="modal-content">
     <div class="modal-header">
@@ -165,7 +165,7 @@ You could use the javascript by just adding ***data-script="name of script"*** o
 ```
 
 ### Toast
-```HTML
+```html
 <div class="toast toast-success active" data-script="Toast"><a class="toast-close" href="#"><span class="bar"></span><span class="bar"></span></a>
   <div class="toast-content">
     <p>This is a toast example</p>
@@ -174,7 +174,7 @@ You could use the javascript by just adding ***data-script="name of script"*** o
 ```
 
 ### Panel
-```HTML
+```html
 <div class="container">
   <div class="row with-one-column">
     <div class="column">
