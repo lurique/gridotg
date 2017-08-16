@@ -1,5 +1,7 @@
 ![version](https://lhenrique.com.br/img/gridotg/version.svg)
-![release](https://img.shields.io/badge/release-alpha-yellowgreen.svg)
+![release](https://lhenrique.com.br/img/gridotg/release.svg)
+![dependencies](https://lhenrique.com.br/img/gridotg/dependencies.svg)
+![license](https://lhenrique.com.br/img/gridotg/license.svg)
 
 # Grid On-The-Go
 Grid On-The-Go - A simple powerful grid system for modern browsers

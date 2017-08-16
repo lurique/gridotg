@@ -1,0 +1,43 @@
+form {
+	label {
+		display: block;
+		padding: 7.5px 0;
+	}
+	
+	.input {
+		@include size(100%, auto);
+		border-radius: 3px;
+		border: 1px solid $gray;
+		display: block;
+		padding: 7.5px;
+		position: relative;
+
+		&.no-resize {
+			resize: none;
+		}
+
+		&:focus {
+			border-color: $green;
+		}
+	}
+
+	.select-group {
+		position: relative;
+
+		&::after {
+			@include pseudo-element('▼', absolute, 50%, 10px, initial, initial);
+			color: $green;
+			font-size: 0.6em;
+			transform: translateY(-50%);
+			z-index: 10;
+		}
+
+		select {
+			cursor: pointer;
+
+			&.input {
+				appearance: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+div.container
+	div.row.with-one-column
+		div.column.is-4
+			form(action="#" method="#")
+				label(for="name") Name
+				div.input-group
+					input#name.input(type="text")
+
+				label(for="options") Options
+				div.select-group
+					select#options.input
+						option(selected disabled) Select an option
+						option(value="1") First option
+						option(value="2") Second option
+						option(value="3") Third option
+
+				label(for="message") Message
+				div.textarea-group
+					textarea#message.input.no-resize
