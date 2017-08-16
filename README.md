@@ -1,4 +1,4 @@
-![version](https://img.shields.io/badge/version-v0.1.0-blue.svg)
+![version](https://lhenrique.com.br/img/gridotg/version.svg)
 ![release](https://img.shields.io/badge/release-alpha-yellowgreen.svg)
 
 # Grid On-The-Go
