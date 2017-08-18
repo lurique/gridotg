@@ -5,7 +5,8 @@ var gulp = require('gulp'),
 		cssnano = require('gulp-cssnano'),
 		jade = require('gulp-jade'),
 		uglify = require('gulp-uglify'),
-		sass = require('gulp-sass');
+		scss = require('gulp-sass'),
+		scsslint = require('gulp-scss-lint');
 
 var browsersync = require('browser-sync'),
 		path_src = './src/',
@@ -30,11 +31,21 @@ gulp.task('css', function() {
 	gulp.src(path_src + 'scss/main.scss')
 		.pipe(changed(path_dist + 'css'), {extension: 'css'})
 		.pipe(concat('gridotg.min.css'))
-		.pipe(sass())
+		.pipe(scss())
 		.on('error', swallowError)
 		.pipe(autoprefixer())
 		.pipe(cssnano())
 		.pipe(gulp.dest(path_dist + 'css'));
+});
+
+gulp.task('scss-lint', function() {
+	gulp.src(path_src + 'scss/**/*.scss')
+		.pipe(
+			scsslint({
+				'config': __dirname + '/.scsslint.yml',
+				'reporterOutput': 'scsslintReport.json'
+			})
+		);
 });
 
 gulp.task('js', function() {
