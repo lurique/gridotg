@@ -5,6 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "npm run gulp",
+    "lint": "npm run gulp scss-lint",
     "gulp": "gulp"
   },
   "repository": "git+https://github.com/lurique/gridotg.git",
