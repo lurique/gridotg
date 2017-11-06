@@ -61,5 +61,4 @@ typings/
 .env
 
 # Removing compiled files
-dist/
 .DS_Store
