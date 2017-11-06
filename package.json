@@ -4,7 +4,7 @@
   "description": "Grid On-The-Go - A simple powerful grid system for modern browsers",
   "main": "index.html",
   "scripts": {
-    "start": "npm run gulp",
+    "start": "npm run lint",
     "lint": "npm run gulp scss-lint",
     "gulp": "gulp"
   },
