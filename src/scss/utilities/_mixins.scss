@@ -53,38 +53,3 @@
 		padding-right: $size;
 	}
 }
-
-/************************************
-	ARROWS
-************************************/
-@mixin arrow-direction($dir, $size, $color) {
-	@if $dir == 'top' {
-		border-bottom: $size solid $color;
-		border-left: $size solid transparent;
-		border-right: $size solid transparent;
-	} @else if $dir == 'right' {
-		border-bottom: $size solid transparent;
-		border-left: $size solid $color;
-		border-top: $size solid transparent;
-	} @else if $dir == 'bottom' {
-		border-left: $size solid transparent;
-		border-right: $size solid transparent;
-		border-top: $size solid $color;
-	} @else if $dir == 'left' {
-		border-bottom: $size solid transparent;
-		border-right: $size solid $color;
-		border-top: $size solid transparent;
-	}
-}
-
-/************************************
-	PSEUDO ELEMENTS
-************************************/
-@mixin pseudo-element($content, $pos, $top, $right, $bottom, $left) {
-	content: $content;
-	position: $pos;
-	top: $top;
-	right: $right;
-	bottom: $bottom;
-	left: $left;
-}
