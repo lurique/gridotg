@@ -1,4 +1,8 @@
 language: ruby
 sudo: disabled
-install: npm install
+os: linux
+install:
+- sudo apt-get install ruby-full
+- gem install scss-lint
+- npm install
 script: npm start
