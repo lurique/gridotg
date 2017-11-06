@@ -38,7 +38,7 @@ gulp.task('css', function() {
 		.pipe(gulp.dest(path_dist + 'css'));
 });
 
-gulp.task('scss-lint', function() {
+gulp.task('css-linter', function() {
 	gulp.src(path_src + 'scss/**/*.scss')
 		.pipe(
 			scsslint({

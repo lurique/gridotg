@@ -1,4 +1,4 @@
-language: css
+language: ruby
 sudo: disabled
 install: yarn install
 script: yarn start
