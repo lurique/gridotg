@@ -84,7 +84,9 @@
 /************************************
 	MEDIA RESPONSIVE
 ************************************/
-img, video, iframe {
+img,
+video,
+iframe {
 	&.is-responsive {
 		@include size(100%, auto);
 	}
