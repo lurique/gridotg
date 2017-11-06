@@ -1,8 +1,4 @@
-# Default application configuration that all configurations inherit from.
-
 scss_files: "src/**/*.scss"
-
-# Default severity of all linters.
 severity: warning
 
 linters:
@@ -17,7 +13,7 @@ linters:
 
   BorderZero:
     enabled: true
-    convention: zero # or `none`
+    convention: zero
 
   ChainedClasses:
     enabled: false
@@ -46,7 +42,7 @@ linters:
 
   ElsePlacement:
     enabled: true
-    style: same_line # or 'new_line'
+    style: same_line
 
   EmptyLineBetweenBlocks:
     enabled: true
@@ -64,11 +60,11 @@ linters:
 
   HexLength:
     enabled: true
-    style: short # or 'long'
+    style: short
 
   HexNotation:
     enabled: true
-    style: lowercase # or 'uppercase'
+    style: lowercase
 
   HexValidation:
     enabled: true
@@ -87,12 +83,12 @@ linters:
   Indentation:
     enabled: true
     allow_non_nested_indentation: false
-    character: tab # or 'tab'
+    character: tab
     width: 1
 
   LeadingZero:
     enabled: true
-    style: exclude_zero # or 'include_zero'
+    style: exclude_zero
 
   MergeableSelector:
     enabled: true
@@ -101,7 +97,7 @@ linters:
   NameFormat:
     enabled: true
     allow_leading_underscore: true
-    convention: hyphenated_lowercase # or 'camel_case', or 'snake_case', or a regex pattern
+    convention: hyphenated_lowercase
 
   NestingDepth:
     enabled: true
@@ -134,14 +130,14 @@ linters:
   PropertyUnits:
     enabled: true
     global: [
-      'ch', 'em', 'ex', 'rem',                 # Font-relative lengths
-      'cm', 'in', 'mm', 'pc', 'pt', 'px', 'q', # Absolute lengths
-      'vh', 'vw', 'vmin', 'vmax',              # Viewport-percentage lengths
-      'deg', 'grad', 'rad', 'turn',            # Angle
-      'ms', 's',                               # Duration
-      'Hz', 'kHz',                             # Frequency
-      'dpi', 'dpcm', 'dppx',                   # Resolution
-      '%']                                     # Other
+      'ch', 'em', 'ex', 'rem',
+      'cm', 'in', 'mm', 'pc', 'pt', 'px', 'q',
+      'vh', 'vw', 'vmin', 'vmax',
+      'deg', 'grad', 'rad', 'turn',
+      'ms', 's',
+      'Hz', 'kHz',
+      'dpi', 'dpcm', 'dppx',
+      '%']
     properties: {}
 
   PseudoElement:
@@ -159,7 +155,7 @@ linters:
 
   SelectorFormat:
     enabled: true
-    convention: hyphenated_lowercase # or 'strict_BEM', or 'hyphenated_BEM', or 'snake_case', or 'camel_case', or a regex pattern
+    convention: hyphenated_lowercase
 
   Shorthand:
     enabled: true
@@ -174,34 +170,34 @@ linters:
 
   SpaceAfterComma:
     enabled: true
-    style: one_space # or 'no_space', or 'at_least_one_space'
+    style: one_space
 
   SpaceAfterComment:
     enabled: false
-    style: one_space # or 'no_space', or 'at_least_one_space'
+    style: one_space
     allow_empty_comments: true
 
   SpaceAfterPropertyColon:
     enabled: true
-    style: one_space # or 'no_space', or 'at_least_one_space', or 'aligned'
+    style: one_space
 
   SpaceAfterPropertyName:
     enabled: true
 
   SpaceAfterVariableColon:
     enabled: false
-    style: one_space # or 'no_space', 'at_least_one_space' or 'one_space_or_newline'
+    style: one_space
 
   SpaceAfterVariableName:
     enabled: true
 
   SpaceAroundOperator:
     enabled: true
-    style: one_space # or 'at_least_one_space', or 'no_space'
+    style: one_space
 
   SpaceBeforeBrace:
     enabled: true
-    style: space # or 'new_line'
+    style: space
     allow_single_line_padding: false
 
   SpaceBetweenParens:
@@ -210,7 +206,7 @@ linters:
 
   StringQuotes:
     enabled: true
-    style: single_quotes # or double_quotes
+    style: single_quotes
 
   TrailingSemicolon:
     enabled: true
