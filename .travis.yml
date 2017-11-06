@@ -1,0 +1,4 @@
+language: css
+sudo: disabled
+install: yarn install
+script: yarn start
