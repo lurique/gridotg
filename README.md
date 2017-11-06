@@ -2,7 +2,7 @@
 ![release](https://lhenrique.com.br/img/gridotg/release.svg)
 
 # Grid On-The-Go
-Grid On-The-Go - A simple powerful grid system for modern browsers
+Grid On-The-Go - A simple powerful grid system for modern browsers (BETA)
 
 ---
 ## How to install
@@ -12,11 +12,6 @@ Installing via npm:
 ```{r, engine='bash', count_lines}
 npm install gridotg --save
 ```
-Installing via github (via HTTPS):
-```{r, engine='bash', count_lines}
-git clone https://github.com/lurique/gridotg.git
-```
-
 Now you've downloaded it, you can compile the file ***main.scss*** under ***SCSS*** folder or copy the compiled version of it under ***CSS*** folder (***gridotg.min.css***).
 
 ---
@@ -78,13 +73,7 @@ The gridotg comes with twelve columns system, and you can call it like the demo 
 .is-12
 ```
 
-**NOTE**: The *row* needs to be inside container and with one of the additional classes listed above. Inside the row needs to be the columns in the same amount as the class described in row.
-
----
-
-### Some notes
-
-YES! It's already responsive (*~~kinda~~*).
+**NOTE**: The *row* needs to be inside container and with one of the additional classes listed above. Inside the row needs to be the columns in the same amount as the class described in row. (Updates coming soon!)
 
 ---
 ### Author
